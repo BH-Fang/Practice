@@ -6,6 +6,3 @@ class Solution:
             if i + 1 < len(s) and roman_map[s[i + 1]] > roman_map[s[i]]: total -= roman_map[s[i]]
             else: total += roman_map[s[i]]
         return total
-
-sol = Solution()
-print(sol.romanToInt("MCMXCIV"))
