@@ -1,15 +1,12 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
         if numRows == 1: return s
-        inverse = False
-        rows = []
-        for _ in range(numRows):
-            rows.append('')
+        step = 1
+        rows = [''] * numRows
         i = 0
         for ch in s:
             rows[i] += ch
-            if not inverse: i += 1
-            else: i -= 1
-            if i == numRows - 1: inverse = True
-            elif i == 0: inverse = False
+            i += step
+            if i == numRows - 1: step = -1
+            elif i == 0: step = 1
         return ''.join(rows)
