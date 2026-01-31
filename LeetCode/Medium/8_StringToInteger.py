@@ -18,5 +18,3 @@ class Solution:
         elif ans < (2 ** 31) * - 1: ans = (2 ** 31) * - 1
         return ans
 
-S = Solution()
-print(S.myAtoi("-+12"))
